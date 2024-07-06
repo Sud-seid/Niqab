@@ -1,11 +1,484 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>niqab</title>
+    <title>The Deen Hub</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #efefef;
+            box-sizing: border-box;
+            margin: 0;
+            color: #541b28;
+        }
+       
+        .home-1 {
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #b84c65;
+            padding: 10px 20px;
+            color: #fffff9;
+        }
+        .home-section {
+    padding: 80px 0;
+    background-color:  #fffff9;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.intro {
+    margin-bottom: 40px;
+}
+
+.intro h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #702939;
+}
+
+.intro p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #260505;
+}
+
+.content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.explore, .latest-articles, .join-community {
+    flex: 1;
+    margin: 0 20px;
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #b84c65;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: left;
+}
+
+.explore h3, .latest-articles h3, .join-community h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #fff9f9;
+}
+
+.explore ul, .latest-articles ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.explore ul li, .latest-articles ul li {
+    margin-bottom: 10px;
+}
+
+.explore ul li a, .latest-articles ul li a {
+    text-decoration: none;
+    color: #fff9f9;
+    font-size: 16px;
+}
+
+.join-community p {
+    line-height: 1.6;
+    color: #fff5f5;
+}
+
+.join-community a {
+    text-decoration: none;
+    color: #6fb5ff;
+    font-weight: bold;
+}
+
+    .section {
+    padding: 80px 40px;
+    background-color: #faebeb;
+    text-align: center;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.section h2 {
+    color: #b84c65;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.section p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #360c0c;
+}
+
+
+        header img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color:  #fffff9;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .menu {
+            display: none;
+            cursor: pointer;
+        }
+
+        .menu div {
+            width: 25px;
+            height: 3px;
+            background-color:  #fffff9;
+            margin: 5px;
+        }
+
+        .main-content {
+            padding: 20px;
+        }
+
+        .section {
+            margin-bottom: 20px;
+        }
+
+        .section h2 {
+            color: #b84c65;
+        }
+
+        .hidden-menu {
+            display: none;
+            position: fixed;
+            right: 0;
+            top: 0;
+            height: 160px;
+            width: 100px;
+            background-color: #fff5f5;
+            padding: 20px 0;
+            z-index: 1000;
+            margin-top: 60px;
+
+        }
+
+        .hidden-menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        .hidden-menu ul li {
+            margin: 20px 0;
+        }
+
+        .hidden-menu ul li a {
+            color:  #b84c65;
+            text-decoration: none;
+        }
+        .section {
+    padding: 80px 40px;
+    background-color:  #fffff9; 
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text {
+    flex: 1;
+    padding-right: 50px;
+    font-family: 'Arial', sans-serif;
+}
+
+.text h2 {
+    font-size: 32px; 
+    margin-bottom: 20px;
+}
+
+.text p {
+    font-size: 18px; 
+    line-height: 1.6;
+    color: #260808; 
+}
+
+.image-container {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); 
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    border-radius: 0 10px 10px 0;
+}
+
+.overlay-text {
+    color: rgb(255, 250, 250);
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase; 
+}
+.image-container img {
+    width: 100%;
+    max-width: 100%;
+    display: block;
+    border-radius: 10px; 
+    transition: transform 0.3s ease;
+}
+
+.image-container:hover img {
+    transform: scale(1.1); 
+}
+
+.contact-1{
+    color: #fff3f5;
+    background-color: #b84c65e1;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 500px ;
+    width: 100%;
+    padding-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px; 
+    transition: transform 0.3s ease;
+}
+.space-1{
+    color:  #fffff9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-bottom: 20px;
+}
+.space-1 p{
+    color: #360c0c;
+}
+a:-webkit-any-link {
+    color: #360c0c;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+footer {
+            background-color: #b84c65;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            width: 100%;
+        }
+
+        @media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .explore, .latest-articles, .join-community {
+        width: 100%;
+        margin: 0 0 30px;
+    }
+}
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+    }
+
+    .image-overlay {
+        width: 100%;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .text {
+        padding: 20px;
+    }
+}
+
+
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+            }
+
+            .menu {
+                display: block;
+            }
+
+            .hidden-menu {
+                width: 100px;
+            }
+        }
+  </style>
+   <script>
+    function toggleMenu() {
+        var hiddenMenu = document.getElementById("hiddenMenu");
+        if (hiddenMenu.style.display === "block") {
+            hiddenMenu.style.display = "none";
+        } else {
+            hiddenMenu.style.display = "block";
+        }
+    }
+    function clearForm() {
+document.getElementById('contactForm').reset();
+}
+</script>
 </head>
 <body>
-    <h1>niqab</h1>
+    <header>
+        <img src="LO.png" alt="logo">
+        <h1>The Deen Hub</h1>
+        <div class="menu" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#resources">Resources</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="hidden-menu" id="hiddenMenu">
+        <ul>
+            <li><a href="#home" onclick="toggleMenu()">Home</a></li>
+            <li><a href="#about" onclick="toggleMenu()">About Us</a></li>
+            <li><a href="#resources" onclick="toggleMenu()">Resources</a></li>
+            <li><a href="#contact" onclick="toggleMenu()">Contact Us</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+
+        <section id="home" class="home-section">
+            <div class="container">
+                <div class="intro">
+                    <h2>Welcome to The Deen Hub</h2>
+                    <p>Assalamu Alaikum wa Rahmatullahi wa Barakatuh! Welcome to The Deen Hub, a space dedicated to empowering and inspiring Islamic women. My name is Suda, and I am passionate about sharing knowledge, ideas, and advice rooted in Islamic teachings.</p>
+                    <p>Our vision is to create a supportive community where Islamic women can learn, grow, and share their experiences. We aim to provide valuable resources, insightful articles, and practical advice to help you lead a fulfilling life according to Islamic principles.</p>
+                </div>
+                
+                <div class="content">
+                    <div class="explore">
+                        <h3>Explore Our Content</h3>
+                        <ul>
+                            <li><a href="#about">About Us: Learn more about our mission and the team behind The Deen Hub.</a></li>
+                            <li><a href="#resources">Resources: Access articles, books, lectures, and more to enrich your knowledge.</a></li>
+                            <li><a href="#contact">Contact Us: Get in touch with us for any questions or feedback.</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="latest-articles">
+                        <h3>Latest Articles</h3>
+                        <ul>
+                            <li><a href="#">Understanding the Importance of Tahajub: A comprehensive guide to the significance of Tahajub.</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="join-community">
+                        <h3>Join Our Community</h3>
+                        <p>Stay updated with the latest posts and exclusive content by subscribing to our newsletter. Follow us on social media to join the conversation and connect with like-minded sisters.</p>
+                        <p>Feel free to reach out with any questions or just to say Salam. Visit our <a href="#contact">Contact Us</a> page for more details.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+        <section id="about" class="section" class="about">
+            <div class="content">
+                <div class="text">
+                    <h2>About Us</h2>
+                    <p>Assalamu Alaikum! I'm Suda, the founder of The Deen Hub. With a background in Islamic studies and a passion for community building, I created this platform to share knowledge, inspire, and connect with Muslim women around the world.</p>
+                    <p>Our mission is to provide a safe and supportive space for Islamic women to access valuable resources, engage in meaningful discussions, and grow in their faith. We envision a global community of empowered Muslim women who lead fulfilling lives guided by Islamic principles.</p>
+                    <p>At The Deen Hub, we are guided by the core values of faith, knowledge, community, and empowerment. We believe in sharing authentic Islamic teachings and practical advice to help our sisters navigate life's challenges.</p>
+                </div>
+                <div class="image-container">
+                    <div class="image-overlay">
+                        <p class="overlay-text">The Deen Hub Team</p>
+                    </div>
+                    <img src="team-pic.jpg" alt="Team Photo">
+                </div>
+            </div>
+        </section>
+        
+
+        <section id="resources" class="section">
+            <h2>Resources</h2>
+            <p>Explore our collection of in-depth articles on various aspects of Islam, including spiritual growth, family life, and health. Each article is written with the intention of providing practical advice and insights.</p>
+            <p>Check out our recommended reading list, featuring books on Islamic teachings, personal development, and more. Each book is selected to help you deepen your understanding and enrich your life.</p>
+            <p>We have curated a selection of lectures and videos from trusted Islamic scholars. Watch these to gain valuable insights and knowledge on various topics.</p>
+            <p>Join our online and offline courses and workshops to learn and grow. From Quranic studies to personal development, we offer a range of programs to suit your needs.</p>
+            <p>Access free downloadable resources like e-books, guides, and worksheets to support your learning and growth.</p>
+        </section>
+
+        <section id="contact" class="section">
+            <h2>Contact Us</h2>
+            <p><strong>Get in Touch:</strong> We would love to hear from you! Please fill out the form below to send us a message.</p>
+            <form class="contact-1">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name"><br><br>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email"><br><br>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
+               <div class="space-1">
+                <input type="submit" value="Submit">
+                <input type="button" value="Clear" onclick="clearForm()">
+            </div>
+            </form>
+            <p class="email-1"><strong>Email:</strong> You can also reach us at <a href="thedeenhub@gmail.com">thedeenhub@gmail.com</a></p>
+        </section>
+        <footer>
+            <p>&copy; 2024 THE DEEN HUB. All Rights Reserved.</p>
+        </footer>
+    </div>
+
 </body>
 </html>

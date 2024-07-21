@@ -241,12 +241,12 @@
 }
 
 .image-overlay {
-    position: absolute;
+    /* position: absolute; */
     top: 0;
     right: 0;
     bottom: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.4); 
+    background-color: #b84c65;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -309,9 +309,9 @@ footer {
             text-align: center;
             padding: 10px;
             width: 100%;
-        }
+}
 
-        @media (max-width: 768px) {
+@media (max-width: 768px) {
     .content {
         flex-direction: column;
         align-items: center;
@@ -338,7 +338,7 @@ footer {
 }
 
 
-        @media (max-width: 768px) {
+@media (max-width: 768px) {
             nav ul {
                 display: none;
             }
@@ -350,7 +350,11 @@ footer {
             .hidden-menu {
                 width: 100px;
             }
-        }
+}
+#hijab a{
+ color: #360c0c;
+ font-weight: 600;
+}
   </style>
    <script>
     function toggleMenu() {
@@ -417,7 +421,7 @@ document.getElementById('contactForm').reset();
                     <div class="latest-articles">
                         <h3>Latest Articles</h3>
                         <ul>
-                            <li><a href="#">Understanding the Importance of Tahajub: A comprehensive guide to the significance of Tahajub.</a></li>
+                            <li id="hijab"><a href="niqab.html">Understanding the Importance of Niqab</a></li>
                         </ul>
                     </div>
                     
@@ -461,7 +465,7 @@ document.getElementById('contactForm').reset();
         <section id="contact" class="section">
             <h2>Contact Us</h2>
             <p><strong>Get in Touch:</strong> We would love to hear from you! Please fill out the form below to send us a message.</p>
-            <form class="contact-1">
+            <form class="contact-1" id="contactForm">
                 <label for="name">Name</label>
                 <input type="text" id="name" name="name"><br><br>
                 <label for="email">Email</label>

@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Niqab</title>
-    <style>
-        body {
+    <!-- <style>
+        <!--  body {
             font-family: Arial, sans-serif;
             background-color: #efefef;
             margin: 0;
@@ -97,6 +97,7 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
+
         }
         h2{
             padding-left: 50px;
@@ -138,7 +139,9 @@ h6{
             flex-wrap: wrap;
             justify-content: center;
             align-items: center;
-            gap: 20px;
+            gap: 180px;
+            margin-top: 80px;
+            margin-bottom: 80px;
         }
 
         .text {
@@ -172,15 +175,18 @@ h6{
         }
 
         .small-images img {
-            width: 140px;
-            height: auto;
-            border-radius: 10px;
+            margin-top: 10px;
+            height: 110px;
+            width: 70px;
+            border-radius: 5px;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
+            margin-left: 40px;
+            margin-bottom: 10px;
         }
 
-        .small-images img:hover {
-            transform: scale(1.1);
+        .small-images  {
+            transform: scale(4);
         }
         
 .explore {
@@ -269,7 +275,7 @@ h4{
             }
 
             .text, .image-container {
-                flex: 1 1 100%;
+                flex: 1 1 40%;
                 padding: 20px;
             }
 
@@ -282,7 +288,393 @@ h4{
                 width: 80%;
             }
         }
-    </style>
+    </style> -->
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #efefef;
+    margin: 0;
+    color: #541b28;
+}
+
+.home-1 {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #b84c65;
+    padding: 10px 20px;
+    color: #fffff9;
+}
+
+header img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fffff9;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu {
+    display: none;
+    cursor: pointer;
+}
+
+.menu div {
+    width: 25px;
+    height: 3px;
+    background-color: #fffff9;
+    margin: 5px;
+}
+
+.hidden-menu {
+    display: none;
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 160px;
+    width: 100px;
+    background-color: #fff5f5;
+    padding: 20px 0;
+    z-index: 1000;
+    margin-top: 60px;
+}
+
+.hidden-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.hidden-menu ul li {
+    margin: 20px 0;
+}
+
+.hidden-menu ul li a {
+    color: #b84c65;
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h2 {
+    padding-left: 50px;
+    color: #7a2f40;
+    font-size: 27px;
+    margin-bottom: 20px;
+}
+
+h6 {
+    color: #7a2f40;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.section {
+    margin-top: 30px;
+    padding: 50px 20px;
+    background-color: #fffff9;
+    /* text-align: center; */
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.section h2 {
+    padding-left: 40px;
+    color: #b84c65;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.section p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #360c0c;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 180px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.text {
+    flex: 1 1 400px;
+    padding: 20px;
+}
+
+.text h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.text p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #260808;
+}
+
+.image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.small-images {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+}
+
+.small-images img {
+    margin-top: 10px;
+    height: 110px;
+    width: 70px;
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    margin-left: 40px;
+    margin-bottom: 10px;
+}
+
+.small-images {
+    transform: scale(4);
+}
+
+.explore {
+    flex: 1;
+    margin: 0 20px;
+    margin-bottom: 40px;
+    padding: 20px;
+    /* background: linear-gradient(180deg, #b84c65 0%, rgba(184, 76, 101, 0.8) 25%, rgba(184, 76, 101, 0.6) 50%, rgba(184, 76, 101, 0.4) 75%, rgba(184, 76, 101, 0) 100%); */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: left;
+    background-color: #b84c65; 
+}
+
+.bg-1 {
+    background: linear-gradient(180deg, #b84c65 0%, rgba(184, 76, 101, 0.8) 25%, rgba(184, 76, 101, 0.6) 50%, rgba(184, 76, 101, 0.4) 75%, rgba(184, 76, 101, 0) 100%);
+    color: #050101;
+    border-radius: 10px;
+    padding: 25px 25px;
+}
+
+.explore h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #fff9f9;
+}
+
+.explore ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.explore ul li, .latest-articles ul li {
+    margin-bottom: 10px;
+}
+
+.explore ul li a, .latest-articles ul li a {
+    text-decoration: none;
+    color: #fff9f9;
+    font-size: 16px;
+}
+
+h4 {
+    font-size: 20px;
+}
+
+.importance-section {
+    background-color:  #fffff9;
+    color:  #b84c65;
+    margin: 0 20px;
+    margin-bottom: 40px;
+    padding: 20px 40px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: left;
+}
+
+.importance-section h3 {
+    color: #b84c65;
+}
+
+.importance-section p {
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+@media (max-width: 1200px) {
+    .container {
+        max-width: 1000px;
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        max-width: 750px;
+    }
+
+    .text, .image-container {
+        flex: 1 1 100%;
+    }
+
+    .small-images img {
+        height: 90px;
+        width: 60px;
+        margin-left: 0;
+    }
+
+    .small-images {
+        transform: scale(3);
+    }
+}
+
+@media (max-width: 768px) {
+    .menu {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    .hidden-menu {
+        width: 100px;
+    }
+
+    .content {
+        flex-direction: column;
+    }
+
+    .text, .image-container {
+        flex: 1 1 100%;
+        padding: 20px;
+    }
+
+    .small-images {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .small-images img {
+        height: 80px;
+        width: 50px;
+        margin-left: 0;
+    }
+
+    .small-images {
+        transform: scale(2);
+    }
+
+    .explore {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    .importance-section {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    header img {
+        width: 60px;
+        height: 60px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    nav ul li {
+        margin: 0 5px;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 576px) {
+    .text h2, .explore h3, h4 {
+        font-size: 18px;
+    }
+
+    .text p, .explore ul li a, .importance-section p {
+        font-size: 14px;
+    }
+
+    .container {
+        max-width: 100%;
+    }
+
+    .hidden-menu ul li {
+        margin: 10px 0;
+    }
+
+    .importance-section h2, .importance-section h3 {
+        font-size: 18px;
+    }
+
+    .importance-section p, .explore h3, .explore ul li a {
+        font-size: 14px;
+    }
+
+    .small-images img {
+        height: 80px;
+        width: 50px;
+    }
+
+    .small-images {
+        transform: scale(1.5);
+    }
+
+    .explore {
+        margin: 0 5px;
+        padding: 10px;
+    }
+
+    .importance-section {
+        margin: 0 5px;
+        padding: 10px 10px;
+    }
+}
+
+</style>
 </head>
 <body>
     <header>
@@ -312,15 +704,16 @@ h4{
     </div>
     <div class="container">
         <div class="section content about">
-            <div class="text">
-                <h2>What is Niqaab?</h2>
-                <p>A niqāb or niqaab (Arabic: نقاب), also known as a ruband (Persian: روبند), is a long garment worn by Muslim women in order to cover their entire body and face, excluding their eyes. It is worn in public and in all other places where a woman may encounter non-mahram men.</p>
-            </div>
             <div class="image-container">
                 <div class="small-images">
                     <img src="niqab-1.jpg" alt="Niqab Image 1">
                 </div>
             </div>
+            <div class="text">
+                <h2>What is Niqaab?</h2>
+                <p>A niqāb or niqaab (Arabic: نقاب), also known as a ruband (Persian: روبند), is a long garment worn by Muslim women in order to cover their entire body and face, excluding their eyes. It is worn in public and in all other places where a woman may encounter non-mahram men.</p>
+            </div>
+
         </div>
     </div>
     <div class="explore">
